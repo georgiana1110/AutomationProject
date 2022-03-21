@@ -13,7 +13,12 @@ public class HomePage extends BasePage {
     private By signInButton = By.id("btn1");
     private By skipSignInButton = By.id("btn2");
     private By emailField = By.id("email");
-    private By nextButton = By.id("entering");
+    private By nextButton = By.id("enterimg");
+    private By passwordField =By.xpath("//input[@ng-model='Password");
+    private By emailField2 =By.xpath("//input[@ng-model='Email");
+    private By pressEnterButton =By.id("enterbtn");
+
+
 
 
     private HomePage() {
@@ -41,8 +46,6 @@ public class HomePage extends BasePage {
     public void clickSkipSignInButton() {
         LOG.info("Click skip sign in button");
         driver.findElement(skipSignInButton).click();
-
-
     }
 
     public void clickBack() {
@@ -53,6 +56,19 @@ public class HomePage extends BasePage {
     public void checkEmailField(String email) {
         LOG.info("Check email field");
         driver.findElement(emailField).sendKeys(email);
+
+    }
+    public void clickNextButton(){
+        LOG.info("Click Next button");
+        driver.findElement(nextButton).click();
+    }
+    public void insertEmail(String email){
+        LOG.info("Insert Email");
+        driver.findElement(emailField2).sendKeys(email);
+    }
+    public void insertPassword(String password){
+        LOG.info("Insert Password");
+        driver.findElement(passwordField).sendKeys(password);
     }
 
 }
