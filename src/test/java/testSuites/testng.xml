@@ -5,6 +5,8 @@
         <classes>
             <class name="test.homepageTest.homepageTest">
             </class>
+            <class name="test.registerTest.registerTest">
+            </class>
         </classes>
     </test>
 
