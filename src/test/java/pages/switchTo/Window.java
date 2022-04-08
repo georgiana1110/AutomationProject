@@ -26,27 +26,27 @@ public class Window extends BasePage {
         return instance;
     }
 
-    public static void clickWindowTabTabbed() {
+    public void clickWindowTabTabbed() {
         driver.findElement(windowTabTabbed).click();
     }
-    public static void clickWindowTabSeperate() {
+    public void clickWindowTabSeperate() {
         driver.findElement(windowTabSeparate).click();
     }
-    public static void clickWindowTabMultiple() {
+    public void clickWindowTabMultiple() {
         driver.findElement(windowTabMultiple).click();
     }
 
-    public static void clickToTriggerTabbedWindow() {
+    public void clickToTriggerTabbedWindow() {
         driver.findElement(triggerTabbedWindow).click();
     }
-    public static void clickToTriggerSeperateWindow() {
+    public void clickToTriggerSeperateWindow() {
         driver.findElement(triggerSeparateWindow).click();
     }
-    public static void clickToTriggerMultipleWindow() {
+    public void clickToTriggerMultipleWindow() {
         driver.findElement(triggerMultipleWindow).click();
     }
 
-    public static void switchToNewTabWindow(){
+    public void switchToNewTabWindow(){
         String originalWindow = driver.getWindowHandle();
         for (String windowHandle : driver.getWindowHandles()){
             if(!originalWindow.contentEquals(windowHandle)){
